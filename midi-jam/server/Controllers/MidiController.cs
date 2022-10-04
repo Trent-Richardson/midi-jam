@@ -1,9 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SignalR;
-using server;
 using web_client.Services;
 
-namespace SignalRDemo.Controllers;
+namespace server.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
