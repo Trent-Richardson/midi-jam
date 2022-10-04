@@ -1,0 +1,24 @@
+﻿@page "/"
+@using web_client.Services
+@inject IKeyboardService _keyboardService
+
+<PageTitle>Index</PageTitle>
+
+<h1>Hello, world!</h1>
+
+@foreach (var note in _keyboardService.PlayedNotes)
+{
+    <p>@note</p>
+    <br />
+}
+
+<button class="btn btn-primary" @onclick="async () => await SendNote(Note.C)">C</button>
+<button class="btn btn-primary" @onclick="async () => await SendNote(Note.D_flat)">Db</button>
+
+@code{
+    
+    private async Task SendNote(Note note)
+    {
+        await _keyboardService.SendNote(note);
+    }
+}
