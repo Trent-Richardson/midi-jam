@@ -43,3 +43,5 @@ C:\Projects\midi-jam\midi-jam\web-client\bin\Debug\net6.0\Microsoft.Extensions.L
 C:\Projects\midi-jam\midi-jam\web-client\bin\Debug\net6.0\System.IO.Pipelines.dll
 C:\Projects\midi-jam\midi-jam\web-client\bin\Debug\net6.0\shared.dll
 C:\Projects\midi-jam\midi-jam\web-client\bin\Debug\net6.0\shared.pdb
+C:\Projects\midi-jam\midi-jam\web-client\bin\Debug\net6.0\npm_packages\package-lock.json
+C:\Projects\midi-jam\midi-jam\web-client\bin\Debug\net6.0\npm_packages\package.json

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "wanOMYEH8q8WWnbdPBh5GpZVXFsSDGqPakExKtZcKe0=",
+  "Hash": "aDSN6l7ApLnULqQp2AfPIxhdk4k+5ti6Z4M63IKy95Y=",
   "Source": "web-client",
   "BasePath": "_content/web-client",
   "Mode": "Default",
@@ -83,23 +83,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css.map"
-    },
-    {
-      "Identity": "C:\\Projects\\midi-jam\\midi-jam\\web-client\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
-      "SourceId": "web-client",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Projects\\midi-jam\\midi-jam\\web-client\\wwwroot\\",
-      "BasePath": "_content/web-client",
-      "RelativePath": "css/open-iconic/FONT-LICENSE",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\open-iconic\\FONT-LICENSE"
     },
     {
       "Identity": "C:\\Projects\\midi-jam\\midi-jam\\web-client\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
@@ -204,6 +187,23 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
     },
     {
+      "Identity": "C:\\Projects\\midi-jam\\midi-jam\\web-client\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
+      "SourceId": "web-client",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Projects\\midi-jam\\midi-jam\\web-client\\wwwroot\\",
+      "BasePath": "_content/web-client",
+      "RelativePath": "css/open-iconic/FONT-LICENSE",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\open-iconic\\FONT-LICENSE"
+    },
+    {
       "Identity": "C:\\Projects\\midi-jam\\midi-jam\\web-client\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
       "SourceId": "web-client",
       "SourceType": "Discovered",
@@ -270,6 +270,57 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Projects\\midi-jam\\midi-jam\\web-client\\wwwroot\\js\\index.bundle.js",
+      "SourceId": "web-client",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Projects\\midi-jam\\midi-jam\\web-client\\wwwroot\\",
+      "BasePath": "_content/web-client",
+      "RelativePath": "js/index.bundle.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\index.bundle.js"
+    },
+    {
+      "Identity": "C:\\Projects\\midi-jam\\midi-jam\\web-client\\wwwroot\\js\\my_lib.js",
+      "SourceId": "web-client",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Projects\\midi-jam\\midi-jam\\web-client\\wwwroot\\",
+      "BasePath": "_content/web-client",
+      "RelativePath": "js/my_lib.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\my_lib.js"
+    },
+    {
+      "Identity": "C:\\Projects\\midi-jam\\midi-jam\\web-client\\wwwroot\\js\\my_lib.js.LICENSE.txt",
+      "SourceId": "web-client",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Projects\\midi-jam\\midi-jam\\web-client\\wwwroot\\",
+      "BasePath": "_content/web-client",
+      "RelativePath": "js/my_lib.js.LICENSE.txt",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\my_lib.js.LICENSE.txt"
     }
   ]
 }
