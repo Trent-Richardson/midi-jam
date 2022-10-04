@@ -9,6 +9,8 @@ public class KeyboardService : IKeyboardService
     private Task _start { get; set; }
     public List<Note> PlayedNotes { get; set; }
 
+    public delegate void CallbackDefinition(Note note);
+
     public KeyboardService()
     {
         PlayedNotes = new();
@@ -36,8 +38,6 @@ public class KeyboardService : IKeyboardService
                 .WithAutomaticReconnect()
                 .Build();
 
-            SetupReceiver(_connection);
-
             _start = _connection.StartAsync();
             return _start;
         }
@@ -45,22 +45,15 @@ public class KeyboardService : IKeyboardService
         return _start;
     }
 
-    public void SetupReceiver(HubConnection _connection)
+    public void SetupReceiver(CallbackDefinition callback)
     {
         _connection.On<Note>("Update", (note) =>
         {
             PlayedNotes.Add(note);
             Console.WriteLine($"received note: {note}");
-            try
-            {
-                throw new NotImplementedException();
-            }
-            catch (Exception ex)
-            {
-                throw;
-            }
-        });
 
+            callback(note);
+        });
     }
 
     public async Task SendNote(Note note)
