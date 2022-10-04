@@ -7,7 +7,7 @@ public class MessageHubClient : Hub<IMessageHubClient>
 {
     public async Task Update(Note note)
     {
-        Console.WriteLine($"recieved note: {note}");
+        Console.WriteLine($"received note: {note}");
         await Clients.All.Update(note);
         Console.WriteLine($"sent note: {note}");
     }
