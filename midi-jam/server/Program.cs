@@ -29,9 +29,6 @@ if (app.Environment.IsDevelopment())
 }
 app.UseCors("CORSPolicy");
 app.UseRouting();
-//app.UseAuthorization();
-
-//app.MapHub<MessageHubClient>("/note");
 
 app.UseEndpoints(endpoints => {
     endpoints.MapControllers();
