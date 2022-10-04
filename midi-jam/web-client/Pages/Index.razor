@@ -23,11 +23,10 @@
 @foreach (var note in _keyboardService.PlayedNotes)
 {
     <p>@note</p>
-    <br />
 }
 
 @code{
-    
+
     protected override async Task OnInitializedAsync()
     {
         Inialize();
@@ -46,6 +45,7 @@
 
     private async Task PlayNote(Note note)
     {
+        await InvokeAsync(() => StateHasChanged());
         await JsRunTime.InvokeAsync<int>($"MyLib.playNote", (int)note);
     }
 }

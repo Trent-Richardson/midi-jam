@@ -49,7 +49,7 @@ public class KeyboardService : IKeyboardService
     {
         _connection.On<Note>("Update", (note) =>
         {
-            PlayedNotes.Add(note);
+            PlayedNotes.Insert(0, note);
             Console.WriteLine($"received note: {note}");
 
             callback(note);
