@@ -7,32 +7,32 @@
 
 <h1>Keyboard!</h1>
 
-<button class="btn btn-primary" @onclick="async () => await SendNote(Note.C)">C</button>
-<button class="btn btn-primary" @onclick="async () => await SendNote(Note.D_flat)">Db</button>
-<button class="btn btn-primary" @onclick="async () => await SendNote(Note.D)">D</button>
-<button class="btn btn-primary" @onclick="async () => await SendNote(Note.E_flat)">Eb</button>
-<button class="btn btn-primary" @onclick="async () => await SendNote(Note.E)">E</button>
-<button class="btn btn-primary" @onclick="async () => await SendNote(Note.F)">F</button>
-<button class="btn btn-primary" @onclick="async () => await SendNote(Note.G_flat)">Gb</button>
-<button class="btn btn-primary" @onclick="async () => await SendNote(Note.G)">G</button>
-<button class="btn btn-primary" @onclick="async () => await SendNote(Note.A_flat)">Ab</button>
-<button class="btn btn-primary" @onclick="async () => await SendNote(Note.A)">A</button>
-<button class="btn btn-primary" @onclick="async () => await SendNote(Note.B_flat)">Bb</button>
-<button class="btn btn-primary" @onclick="async () => await SendNote(Note.B)">B</button>
+<button style="background-color:white;color:black" class="btn btn-primary" @onclick="async () => await SendNote(Note.C)">C</button>
+<button style="background-color:black;color:white" class="btn btn-primary" @onclick="async () => await SendNote(Note.D_flat)">Db</button>
+<button style="background-color:white;color:black" class="btn btn-primary" @onclick="async () => await SendNote(Note.D)">D</button>
+<button style="background-color:black;color:white" class="btn btn-primary" @onclick="async () => await SendNote(Note.E_flat)">Eb</button>
+<button style="background-color:white;color:black" class="btn btn-primary" @onclick="async () => await SendNote(Note.E)">E</button>
+<button style="background-color:white;color:black" class="btn btn-primary" @onclick="async () => await SendNote(Note.F)">F</button>
+<button style="background-color:black;color:white" class="btn btn-primary" @onclick="async () => await SendNote(Note.G_flat)">Gb</button>
+<button style="background-color:white;color:black" class="btn btn-primary" @onclick="async () => await SendNote(Note.G)">G</button>
+<button style="background-color:black;color:white" class="btn btn-primary" @onclick="async () => await SendNote(Note.A_flat)">Ab</button>
+<button style="background-color:white;color:black" class="btn btn-primary" @onclick="async () => await SendNote(Note.A)">A</button>
+<button style="background-color:black;color:white" class="btn btn-primary" @onclick="async () => await SendNote(Note.B_flat)">Bb</button>
+<button style="background-color:white;color:black" class="btn btn-primary" @onclick="async () => await SendNote(Note.B)">B</button>
 
 @foreach (var note in _keyboardService.PlayedNotes)
 {
     <p>@note</p>
 }
 
-@code{
+@code {
 
     protected override async Task OnInitializedAsync()
     {
         Inialize();
     }
 
-    private void Inialize() 
+    private void Inialize()
     {
         _keyboardService.SetupReceiver(async (note) => await PlayNote(note));
     }
