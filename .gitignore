@@ -4,3 +4,12 @@ midi-jam/web-client/obj/
 midi-jam/server/bin/
 midi-jam/server/obj/
 midi-jam/.vs/
+
+src/web-client/npm_packages/node_modules/
+src/web-client/bin/
+src/web-client/obj/
+src/server/bin/
+src/server/obj/
+src/shared/bin/
+src/shared/obj/
+src/.vs/
