@@ -1,4 +1,3 @@
-using web_client.Data;
 using web_client.Services;
 
 Console.Title = "client";
@@ -10,7 +9,6 @@ builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddSignalR();
     
-builder.Services.AddSingleton<WeatherForecastService>();
 builder.Services.AddSingleton<IKeyboardService, KeyboardService>();
 
 var app = builder.Build();
