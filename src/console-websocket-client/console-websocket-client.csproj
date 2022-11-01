@@ -9,10 +9,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="6.0.4" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\shared\shared.csproj" />
   </ItemGroup>
 
