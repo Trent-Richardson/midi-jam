@@ -13,3 +13,5 @@ src/server/obj/
 src/shared/bin/
 src/shared/obj/
 src/.vs/
+src/console-websocket-client/bin/
+src/console-websocket-client/obj/
