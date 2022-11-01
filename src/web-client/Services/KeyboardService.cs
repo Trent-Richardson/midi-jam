@@ -4,6 +4,8 @@ namespace web_client.Services;
 
 public class KeyboardService : IKeyboardService
 {
+    private readonly IConfiguration _config;
+
     private static HubConnection _connection { get; set; }
     private Task _initialize { get; set; }
     private Task _start { get; set; }
@@ -11,11 +13,12 @@ public class KeyboardService : IKeyboardService
 
     public delegate void CallbackDefinition(Note note);
 
-    public KeyboardService()
+    public KeyboardService(IConfiguration config)
     {
+        _config = config;
         PlayedNotes = new();
         _connection = new HubConnectionBuilder()
-            .WithUrl("https://localhost:7260/note")
+            .WithUrl(config.GetValue("HubUrl", "https://localhost:7260/note"))
             .WithAutomaticReconnect()
             .Build();
 
@@ -26,7 +29,6 @@ public class KeyboardService : IKeyboardService
             await Task.Delay(new Random().Next(0, 5) * 1000);
             await _connection.StartAsync();
         };
-
     }
 
     private Task Initialize()
@@ -34,7 +36,7 @@ public class KeyboardService : IKeyboardService
         if (_connection is null || _connection.State != HubConnectionState.Connected || _start is null)
         {
             _connection = new HubConnectionBuilder()
-                .WithUrl("https://localhost:7260/note")
+                .WithUrl(_config.GetValue("HubUrl", "https://localhost:7260/note"))
                 .WithAutomaticReconnect()
                 .Build();
 
