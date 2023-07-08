@@ -53,5 +53,5 @@ jobs:
         with:
           app-name: 'midi-jam-client'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_1BD445E61578430A97E2464ED558FCF3 }}
+          publish-profile: ${{ secrets.AzureAppService_PublishProfile_8d0510e1e7654e9981138d32bab87534 }}
           package: .
