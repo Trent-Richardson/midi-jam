@@ -51,7 +51,26 @@
 
     private async Task KeyPress(KeyboardEventArgs e)
     {
-        await PlayNote(Note.C);
+        Note? note = e.Key switch
+        {
+            "s" => Note.C,
+            "e" => Note.D_flat,
+            "d" => Note.D,
+            "r" => Note.E_flat,
+            "f" => Note.E,
+            "g" => Note.F,
+            "y" => Note.G_flat,
+            "h" => Note.G,
+            "u" => Note.A_flat,
+            "j" => Note.A,
+            "i" => Note.B_flat,
+            "k" => Note.B,
+            _ => null
+        };
+
+        if (note is null) return;
+
+        await PlayNote(note.Value);
     }
 
     private async Task PlayNote(Note note)
