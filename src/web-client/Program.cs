@@ -9,7 +9,7 @@ builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddSignalR();
     
-builder.Services.AddSingleton<IKeyboardService, KeyboardService>();
+builder.Services.AddTransient<IKeyboardService, KeyboardService>();
 
 var app = builder.Build();
 
