@@ -61,13 +61,12 @@ public class KeyboardService : IKeyboardService
     public async Task SendNote(Note note)
     {
         await _initialize;
-
         try
         {
             await _connection.InvokeAsync("Update", note);
             Console.WriteLine($"sent note: {note}");
         }
-        catch (Exception ex)
+        catch (Exception)
         {
             throw;
         }

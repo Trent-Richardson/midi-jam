@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.SignalR.Client;
-using static web_client.Services.KeyboardService;
+﻿using static web_client.Services.KeyboardService;
 
 namespace web_client.Services;
 
