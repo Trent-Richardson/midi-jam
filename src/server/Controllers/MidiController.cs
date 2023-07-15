@@ -16,9 +16,9 @@ public class MidiController : ControllerBase
 
     [HttpPost]
     [Route("note")]
-    public IActionResult Get([FromBody] Note note)
+    public IActionResult Get([FromBody] Note note, string username)
     {
-        messageHub.Clients.All.Update(note);
+        messageHub.Clients.All.Update(note, username);
         return Ok("Note sent successfully to all users!");
     }
 }

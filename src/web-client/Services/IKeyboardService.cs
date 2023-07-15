@@ -4,8 +4,8 @@ namespace web_client.Services;
 
 public interface IKeyboardService
 {
-    Task SendNote(Note note);
+    Task SendNote(Note note, string username);
     void SetupReceiver(CallbackDefinition callback);
 
-    List<Note> PlayedNotes { get; set; }
+    List<(string, Note)> PlayedNotes { get; set; }
 }

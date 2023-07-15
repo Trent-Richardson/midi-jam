@@ -5,10 +5,9 @@ namespace server;
 
 public class MessageHubClient : Hub<IMessageHubClient>
 {
-    public async Task Update(Note note)
+    public async Task Update(Note note, string username)
     {
-        Console.WriteLine($"received note: {note}");
-        await Clients.All.Update(note);
-        Console.WriteLine($"sent note: {note}");
+        await Clients.All.Update(note, username);
+        Console.WriteLine($"{username} sent note: {note}");
     }
 }

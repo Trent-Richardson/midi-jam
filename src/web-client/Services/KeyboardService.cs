@@ -9,9 +9,9 @@ public class KeyboardService : IKeyboardService
     private static HubConnection _connection { get; set; }
     private Task _initialize { get; set; }
     private Task _start { get; set; }
-    public List<Note> PlayedNotes { get; set; }
+    public List<(string, Note)> PlayedNotes { get; set; }
 
-    public delegate void CallbackDefinition(Note note);
+    public delegate void CallbackDefinition(Note note, string username);
 
     public KeyboardService(IConfiguration config)
     {
@@ -49,22 +49,22 @@ public class KeyboardService : IKeyboardService
 
     public void SetupReceiver(CallbackDefinition callback)
     {
-        _connection.On<Note>("Update", (note) =>
+        _connection.On<Note, string>("Update", (note, username) =>
         {
-            PlayedNotes.Insert(0, note);
-            Console.WriteLine($"received note: {note}");
+            PlayedNotes.Insert(0, new(username, note));
+            Console.WriteLine($"received note: {note} from {username}");
 
-            callback(note);
+            callback(note, username);
         });
     }
 
-    public async Task SendNote(Note note)
+    public async Task SendNote(Note note, string username)
     {
         await _initialize;
         try
         {
-            await _connection.InvokeAsync("Update", note);
-            Console.WriteLine($"sent note: {note}");
+            await _connection.InvokeAsync("Update", note, username);
+            Console.WriteLine($"{username} sent note: {note}");
         }
         catch (Exception)
         {
