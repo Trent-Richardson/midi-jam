@@ -10,7 +10,7 @@ public class Program
         Console.Title = "Websocket test client";
         Console.WriteLine("Websocket test client");
 
-        var wsUrl = GetInput("\nProvide websocket url (default = ws://localhost:7260/note):", "ws://localhost:7260/note");
+        var wsUrl = GetInput("\nProvide websocket url (default = wss://localhost:7260/note):", "wss://localhost:7260/note");
 
         await RunWebSockets(wsUrl);
 
@@ -36,15 +36,13 @@ public class Program
         string message;
         var ws = new ClientWebSocket();
 
-        Task sending = Task.CompletedTask;
-
         await ws.ConnectAsync(new Uri(url), CancellationToken.None);
 
         await PerformHandshake(ws);
 
-        while ((message = GetInput("\nEnter payload (or 'exit' to quit):", "{\"type\":1,\"target\":\"Update\",\"arguments\":[5]}")) != "exit")
+        while ((message = GetInput("\nEnter payload (or 'exit' to quit):", "{\"type\":1,\"target\":\"Update\",\"arguments\":[5, \"mr.console\"]}")) != "exit")
         {
-            sending = Process(ws, url, message);
+            Task sending = Process(ws, url, message);
             var receiving = WriteOutput(ws);
             await Task.WhenAll(sending, receiving);
         }
