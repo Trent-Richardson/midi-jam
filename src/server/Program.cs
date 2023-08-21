@@ -32,7 +32,7 @@ app.UseRouting();
 
 app.UseEndpoints(endpoints => {
     endpoints.MapControllers();
-    endpoints.MapHub<MessageHubClient>("/note");
+    endpoints.MapHub<NoteHubClient>("/note");
 });
 
 app.UseHttpsRedirection();

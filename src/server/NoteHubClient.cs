@@ -3,7 +3,7 @@ using web_client.Services;
 
 namespace server;
 
-public class MessageHubClient : Hub<IMessageHubClient>
+public class NoteHubClient : Hub<INoteHubClient>
 {
     public async Task Update(Note note, string username)
     {

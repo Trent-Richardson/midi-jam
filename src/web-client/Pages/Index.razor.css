@@ -1,0 +1,17 @@
+﻿.keyboard-display {
+    display: block;
+}
+
+.keyboard-buttons {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    .keyboard-display {
+        display: none;
+    }
+
+    .keyboard-buttons {
+        display: block;
+    }
+}

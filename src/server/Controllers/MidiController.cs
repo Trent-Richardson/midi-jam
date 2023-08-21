@@ -8,8 +8,8 @@ namespace server.Controllers;
 [ApiController]
 public class MidiController : ControllerBase
 {
-    private readonly IHubContext<MessageHubClient, IMessageHubClient> messageHub;
-    public MidiController(IHubContext<MessageHubClient, IMessageHubClient> _messageHub)
+    private readonly IHubContext<NoteHubClient, INoteHubClient> messageHub;
+    public MidiController(IHubContext<NoteHubClient, INoteHubClient> _messageHub)
     {
         messageHub = _messageHub;
     }

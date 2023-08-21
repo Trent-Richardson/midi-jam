@@ -26,6 +26,7 @@ public class KeyboardService : IKeyboardService
 
         _connection.Closed += async (error) =>
         {
+            // todo: error handling
             await Task.Delay(new Random().Next(0, 5) * 1000);
             await _connection.StartAsync();
         };

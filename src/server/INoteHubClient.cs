@@ -2,7 +2,7 @@
 
 namespace server;
 
-public interface IMessageHubClient
+public interface INoteHubClient
 {
     Task Update(Note note, string username);
 }
