@@ -99,7 +99,6 @@ public class Program
                 await ws.CloseOutputAsync(WebSocketCloseStatus.NormalClosure, "", CancellationToken.None);
                 break;
             }
-
         }
     }
 }
