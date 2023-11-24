@@ -21,10 +21,4 @@
     <Folder Include="npm_packages\" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Content Update="wwwroot\images\midi-jam-qr-code.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
-
 </Project>

@@ -2,10 +2,6 @@
     display: block;
 }
 
-.qr-code-display {
-    display: block;
-}
-
 .keyboard-buttons {
     display: none;
 }
@@ -17,9 +13,5 @@
 
     .keyboard-buttons {
         display: block;
-    }
-
-    .qr-code-display {
-        display: none;
     }
 }
